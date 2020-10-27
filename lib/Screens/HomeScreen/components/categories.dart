@@ -7,8 +7,8 @@ class Categories extends StatelessWidget {
     List<Map<String, dynamic>> categories = [
       {"icon": "assets/icons/Fish.svg", "text": "Fish"},
       {"icon": "assets/icons/Chicken.svg", "text": "Chicken"},
-      {"icon": "assets/icons/Meat.svg", "text": "Meat"},
-      {"icon": "assets/icons/Egg.svg", "text": "Egg"},
+      {"icon": "assets/icons/Meat.svg", "text": "Mutton"},
+      {"icon": "assets/icons/Egg.svg", "text": "Cooked\nFood"},
       {"icon": "assets/icons/anglerfish.svg", "text": "Fish"},
     ];
 
@@ -57,7 +57,11 @@ class CategoryCard extends StatelessWidget {
                 padding: EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   color: Color(0xFF96caf2).withOpacity(0.3),
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                  ),
                 ),
                 child: SvgPicture.asset(icon),
               ),
@@ -67,6 +71,7 @@ class CategoryCard extends StatelessWidget {
               text,
               textAlign: TextAlign.center,
               style: TextStyle(
+                fontSize: 9,
                 fontWeight: FontWeight.bold,
                 color: Colors.black54,
               ),

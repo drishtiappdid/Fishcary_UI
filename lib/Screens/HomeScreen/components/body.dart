@@ -6,6 +6,7 @@ import 'package:fishcary_app/Screens/HomeScreen/components/popular_products_list
 import 'package:fishcary_app/Screens/HomeScreen/components/refer_and_earn_banner.dart';
 import 'package:fishcary_app/Screens/HomeScreen/components/section_title.dart';
 import 'package:fishcary_app/Screens/Refer&Earn/refer_and_earn.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 List images = [
@@ -35,20 +36,25 @@ class Body extends StatelessWidget {
               Scaffold.of(context).openDrawer();
             }),
             SizedBox(height: 10),
+            //TODO: Replace category icons with svg icons
             Categories(),
-            SizedBox(height: 15),
+            //  SizedBox(height: 5),
             Carousel(),
-            SizedBox(height: 15),
+            //  SizedBox(height: 10),
+            //TODO: replace refer and earn banner with image
             ReferAndEarnBanner(press: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ReferAndEarn()),
+                CupertinoPageRoute(builder: (context) => ReferAndEarn()),
               );
             }),
             SizedBox(height: 10),
+            SectionTitle(title: "Recommendations", press: () {}),
             ImageList(),
             SizedBox(height: 10),
             SectionTitle(title: "Popular Products", press: () {}),
+            //TODO: replace this with detailed products with description and price
+
             PopularProduts(),
             SizedBox(height: 0),
           ],

@@ -20,7 +20,7 @@ class SectionTitle extends StatelessWidget {
           Text(
             title,
             style: TextStyle(
-                fontSize: 18,
+                fontSize: 14,
                 fontWeight: FontWeight.bold,
                 color: Colors.black),
           ),
@@ -30,7 +30,7 @@ class SectionTitle extends StatelessWidget {
             child: Text(
               "See More",
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 10,
                 color: kSecondaryColor,
               ),
             ),

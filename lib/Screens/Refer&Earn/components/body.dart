@@ -6,22 +6,23 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(height: 30),
-        Image.asset("assets/images/refer&earn.png"),
+        Image.asset("assets/images/refer&earn.png", width: 350),
         SizedBox(height: 10),
         Text(
           "Your friends are our friends too!",
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
-            fontSize: 18,
+            fontSize: 16,
           ),
         ),
         SizedBox(height: 10),
         Text(
           'Your unique referal code is',
-          style: TextStyle(color: Colors.grey),
+          style: TextStyle(color: Colors.grey, fontSize: 12),
         ),
         SizedBox(height: 20),
         Container(
@@ -42,9 +43,7 @@ class Body extends StatelessWidget {
                       fontWeight: FontWeight.w900,
                       fontSize: 20),
                 ),
-                GestureDetector(
-                    onTap: (){},
-                    child: Icon(Icons.copy)),
+                GestureDetector(onTap: () {}, child: Icon(Icons.copy)),
               ],
             ),
           ),
@@ -53,7 +52,7 @@ class Body extends StatelessWidget {
         Text(
           'Know More',
           style: TextStyle(
-              color: kPrimaryColor, fontSize: 18, fontWeight: FontWeight.bold),
+              color: kPrimaryColor, fontSize: 12, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 40),
         Row(
@@ -77,15 +76,6 @@ class Body extends StatelessWidget {
                 shape: BoxShape.circle,
               ),
               child: Icon(Icons.copy, color: kPrimaryColor),
-            ),
-            Container(
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.2),
-                shape: BoxShape.circle,
-              ),
-              child: Icon(Icons.share, color: kPrimaryColor),
             ),
           ],
         )
